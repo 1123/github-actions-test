@@ -36,6 +36,7 @@ jobs:
           SCHEMA_REGISTRY_URL: ${{ secrets.SCHEMA_REGISTRY_URL}}
           SR_LOGICAL_CLUSTER_ID: ${{ secrets.SR_LOGICAL_CLUSTER_ID}}
           IDENTITY_POOL_ID: ${{ secrets.IDENTITY_POOL_ID}}
+ 	  AZURE_TENANT: ${{ secrets.AZURE_TENANT }}
         run: ./get-subjects.sh
 
       # Runs a set of commands using the runners shell
