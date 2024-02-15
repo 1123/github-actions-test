@@ -32,6 +32,10 @@ jobs:
       - name: get all schema registry subjects
         env: # Or as an environment variable
           CLIENT_ID: ${{ secrets.CLIENT_ID}}
+          CLIENT_SECRET: ${{ secrets.CLIENT_SECRET}}
+          SCHEMA_REGISTRY_URL: ${{ secrets.SCHEMA_REGISTRY_URL}}
+          SR_LOGICAL_CLUSTER_ID: ${{ secrets.SR_LOGICAL_CLUSTER_ID}}
+          IDENTITY_POOL_ID: ${{ secrets.IDENTITY_POOL_ID}}
         run: ./get-subjects.sh
 
       # Runs a set of commands using the runners shell
